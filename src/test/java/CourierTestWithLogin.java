@@ -1,11 +1,11 @@
-import apitests.package1.CourierClass;
-import apitests.package3.RandomDataGenerator;
+import apitests.CourierClass;
+
+import org.junit.Before;
+import org.junit.Test;
+import apitests.RandomDataGenerator;
 import io.qameta.allure.Description;
 import io.qameta.allure.junit4.DisplayName;
 import io.restassured.response.Response;
-import org.junit.Before;
-import org.junit.Test;
-
 import static org.hamcrest.Matchers.equalTo;
 import static org.hamcrest.Matchers.notNullValue;
 

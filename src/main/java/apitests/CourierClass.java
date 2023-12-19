@@ -1,10 +1,9 @@
-package apitests.package1;
+package apitests;
 
 import io.qameta.allure.Step;
 import io.restassured.response.Response;
-import apitests.package2.Courier;
 
-    public class CourierClass extends BaseClass {
+public class CourierClass extends BaseClass {
 
         private final Courier courier;
         private static final String COURIER_ENDPOINT = "/api/v1/courier";

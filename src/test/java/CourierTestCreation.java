@@ -1,4 +1,4 @@
-import apitests.package1.CourierClass;
+import apitests.CourierClass;
 
 import io.restassured.response.Response;
 
@@ -39,6 +39,18 @@ public class CourierTestCreation extends BaseTest {
     }
 
     @Test
+    @DisplayName("Пытаемся создать курьера не указав имя")
+    @Description("Нужно удостовериться в том, что нельзя создать курьера без имени")
+    public void noNameCreateCourier() {
+        courier.setFirstName(null);
+        Response response = courierClass.createCourier();
+
+        response.then().assertThat().statusCode(201)
+                .and()
+                .body("ok", equalTo(true));
+    }
+
+    @Test
     @DisplayName("Пытаемся создать курьера не указав логин")
     @Description("Нужно удостовериться в том, что нельзя создать курьера без логина")
     public void noLoginCreateCourier() {
@@ -62,15 +74,4 @@ public class CourierTestCreation extends BaseTest {
                 .body("message", equalTo("Недостаточно данных для создания учетной записи"));
     }
 
-    @Test
-    @DisplayName("Пытаемся создать курьера не указав имя")
-    @Description("Нужно удостовериться в том, что нельзя создать курьера без имени")
-    public void noNameCreateCourier() {
-        courier.setFirstName(null);
-        Response response = courierClass.createCourier();
-
-        response.then().assertThat().statusCode(201)
-                .and()
-                .body("ok", equalTo(true));
-    }
 }

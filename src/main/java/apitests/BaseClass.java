@@ -1,4 +1,4 @@
-package apitests.package1;
+package apitests;
 
 import io.restassured.specification.RequestSpecification;
 import static io.restassured.RestAssured.given;

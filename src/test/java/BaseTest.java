@@ -1,6 +1,6 @@
-import apitests.package1.CourierClass;
-import apitests.package2.Courier;
-import apitests.package3.RandomDataGenerator;
+import apitests.CourierClass;
+import apitests.Courier;
+import apitests.RandomDataGenerator;
 import io.qameta.allure.Step;
 import io.restassured.response.Response;
 import org.junit.After;
@@ -12,7 +12,7 @@ public class BaseTest {
     protected CourierClass courierClass;
     protected RandomDataGenerator RandomDataGenerator;
 
-    @Step("Подготовливаем тестовые данные")
+    @Step("Подготавливаем тестовые данные")
     public void setUp() {
         RandomDataGenerator RandomDataGenerator = new RandomDataGenerator();
         initializeTestData(RandomDataGenerator);

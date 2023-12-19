@@ -1,14 +1,14 @@
-import apitests.package1.OrderClass;
-import apitests.package2.Order;
+import apitests.OrderClass;
+import apitests.Order;
+
+import java.util.Arrays;
+import java.util.Collection;
 import io.qameta.allure.Description;
 import io.qameta.allure.junit4.DisplayName;
 import io.restassured.response.Response;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.junit.runners.Parameterized;
-
-import java.util.Arrays;
-import java.util.Collection;
 
 import static org.hamcrest.Matchers.notNullValue;
 
@@ -22,13 +22,13 @@ public class OrderTestCreation extends BaseTest {
         this.orderClass = new OrderClass();
     }
 
-
     @Parameterized.Parameters
     public static Collection<Object[]> data() {
         return Arrays.asList(new Object[][]{
-                {new Order("Naruto1", "Uchiha1", "Konoha, 141 apt.", 1, "+7 800 355 35 31", 1, "2023-06-01", "Saske, come back to Konoha", new String[]{"BLACK"})},
-                {new Order("Naruto2", "Uchiha2", "Konoha, 142 apt.", 15, "+7 800 355 35 32", 5, "2023-06-02", "Saske, come back to Konoha", new String[]{"BLACK", "GREY"})},
-                {new Order("Naruto3", "Uchiha3", "Konoha, 143 apt.", 30, "+7 800 355 35 33", 10, "2024-06-03", "Saske, come back to Konoha", null)}
+
+                {new Order("Иван", "Петров", "Ленина, 21", 2, "+7 999 333 00 00", 2, "2023-09-01", "Жду заказ", new String[]{"GREY"})},
+                {new Order("Сергей", "Матвеев", "Сталина, 34.", 3, "+7 999 444 00 00", 10, "2023-10-01", "Жду заказ", new String[]{"BLACK", "GREY"})},
+                {new Order("Андрей", "Фролов", "Горохова, 31", 5, "+7 999 555 00 00", 3, "2024-12-01", "Жду заказ", null)}
         });
     }
 

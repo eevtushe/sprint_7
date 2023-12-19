@@ -1,4 +1,4 @@
-package apitests.package2;
+package apitests;
 
 public class Order {
 

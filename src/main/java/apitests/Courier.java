@@ -1,4 +1,4 @@
-package apitests.package2;
+package apitests;
 import com.google.gson.Gson;
 
     public class Courier {

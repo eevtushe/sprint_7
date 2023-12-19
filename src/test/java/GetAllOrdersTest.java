@@ -1,9 +1,9 @@
-import apitests.package1.OrderClass;
+import apitests.OrderClass;
+
 import io.qameta.allure.Description;
 import io.qameta.allure.junit4.DisplayName;
 import io.restassured.response.Response;
 import org.junit.Test;
-
 import static org.hamcrest.Matchers.*;
 
 public class GetAllOrdersTest extends BaseTest {

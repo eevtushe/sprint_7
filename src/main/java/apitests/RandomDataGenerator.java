@@ -1,10 +1,9 @@
-package apitests.package3;
+package apitests;
 
-import apitests.package2.Courier;
     public class RandomDataGenerator {
 
         public String getRandomString(int length) {
-            String characters = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ1234567890";
+            String characters = "абвгдежзиклмнопрстуфхцчшщъыьэюяАБВГДЕЖЗИКЛМНОПРСТУФХЦЧШЩЪЫЬЭЮЯ1234567890";
             StringBuilder randomString = new StringBuilder();
 
             for (int i = 0; i < length; i++) {
