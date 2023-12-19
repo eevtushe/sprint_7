@@ -1,0 +1,6 @@
+apitests/CourierClass.class
+apitests/BaseClass.class
+apitests/RandomDataGenerator.class
+apitests/Order.class
+apitests/Courier.class
+apitests/OrderClass.class
